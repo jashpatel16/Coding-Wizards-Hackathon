@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CareerCompass — One-Stop Career & Education Advisor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="bg-orbs"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+<div class="grid-overlay"></div>
+
+<nav class="nav">
+  <div class="logo" onclick="showPage('page-home')">
+    <span class="logo-mark">🧭</span>
+    <span>Career<em>Compass</em></span>
+    <span class="logo-tag">v2.0</span>
+  </div>
+  <div class="nav-links">
+    <button class="link active" onclick="showPage('page-home')">Home</button>
+    <button class="link" onclick="showLibrary()">Explore Careers</button>
+    <button class="nav-cta" onclick="startQuiz()">Start Assessment →</button>
+  </div>
+</nav>
+
+<!-- LANDING -->
+<section id="page-home" class="page active">
+  <div class="hero">
+    <div class="hero-left">
+      <span class="badge"><span class="pulse"></span> Smart Education • Hackathon • Explainable AI</span>
+      <h1>Find your <span class="grad">perfect career</span> with science, not guesswork.</h1>
+      <p class="lede">Take a 60-second 12-question assessment. Our deterministic scoring engine maps you across <b>9 skill dimensions</b> to <b>10 future-ready careers</b> — with roadmap, courses & AI mentor.</p>
+      <div class="cta">
+        <button class="primary big" onclick="startQuiz()">Start Assessment → <small>60 sec • Free</small></button>
+        <button class="ghost big" onclick="showLibrary()">Explore Careers</button>
+      </div>
+      <div class="trust-row">
+        <div class="avatars"><span>🧑‍💻</span><span>👩‍🔬</span><span>🎨</span><span>👨‍🏫</span><span class="more">2k+</span></div>
+        <p>Loved by students • 100% offline • No login needed</p>
+      </div>
+      <div class="stats">
+        <div><b>12</b><span>Smart Questions</span><i>adaptive flow</i></div>
+        <div><b>9</b><span>Skill Dimensions</span><i>explainable</i></div>
+        <div><b>10</b><span>Career Paths</span><i>with roadmaps</i></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-panel">
+        <div class="panel-head">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <span>scoring_engine.live</span>
+          <span class="live">● LIVE</span>
+        </div>
+        <h3>How it works</h3>
+        <div class="steps">
+          <div class="step"><span class="n">1</span><div><b>Answer 12 questions</b><p>4 options each • progress auto-saves</p></div></div>
+          <div class="step"><span class="n">2</span><div><b>Explainable scoring</b><p class="formula">Match% = round( Σ(w<sub>c</sub>×s<sub>u</sub>) / Σ(w<sub>c</sub>×max) ×100 )</p></div></div>
+          <div class="step"><span class="n">3</span><div><b>Get Top 3 + Why</b><p>Strengths, gaps, courses & salary</p></div></div>
+          <div class="step"><span class="n">4</span><div><b>Act & simulate</b><p>Roadmap • What-If • Compare • Mentor</p></div></div>
+        </div>
+        <div class="match-preview">
+          <div class="mp-row"><span>💻 Software</span><div class="mini-track"><div style="width:92%"></div></div><b>92%</b></div>
+          <div class="mp-row"><span>📊 Data Science</span><div class="mini-track"><div style="width:88%"></div></div><b>88%</b></div>
+          <div class="mp-row"><span>🎨 UI/UX</span><div class="mini-track"><div style="width:76%"></div></div><b>76%</b></div>
+        </div>
+        <div class="dims">
+          <span>technical</span><span>analytical</span><span>creative</span><span>communication</span><span>leadership</span><span>problemSolving</span><span>data</span><span>technology</span><span>socialImpact</span>
+        </div>
+      </div>
+      <div class="float-chip fc1">✨ 92% Match found</div>
+      <div class="float-chip fc2">🗺️ Roadmap generated</div>
+    </div>
+  </div>
+
+  <div class="marquee"><div class="track">
+    <span>💻 Software Engineer</span><span>📊 Data Scientist</span><span>🎨 UI/UX Designer</span><span>🛡️ Cybersecurity</span><span>🩺 Doctor</span><span>🚀 Founder</span><span>🏛️ IAS Officer</span><span>🧭 Product Manager</span>
+    <span>💻 Software Engineer</span><span>📊 Data Scientist</span><span>🎨 UI/UX Designer</span><span>🛡️ Cybersecurity</span><span>🩺 Doctor</span><span>🚀 Founder</span><span>🏛️ IAS Officer</span><span>🧭 Product Manager</span>
+  </div></div>
+
+  <h2 class="sec-title">Everything unlocks <span>after your result</span></h2>
+  <p class="sec-sub">Not just a score — a full career operating system.</p>
+  <div class="grid5">
+    <div class="feat"><div class="f-icon">🗺️</div><b>Visual Learning Roadmap</b><p>Step-by-step path from Class 11 to first job & growth.</p><span class="f-link">View sample →</span></div>
+    <div class="feat"><div class="f-icon">💡</div><b>Why This Matches</b><p>Explainable bullets, strengths you show & gaps to fix.</p><span class="f-link">Explainable AI →</span></div>
+    <div class="feat"><div class="f-icon">🎚️</div><b>What-If Simulator</b><p>Drag skill sliders, watch Match% update live & plan growth.</p><span class="f-link">Try simulator →</span></div>
+    <div class="feat"><div class="f-icon">⚖️</div><b>Comparison Matrix</b><p>Salary, growth, education & work-life side-by-side.</p><span class="f-link">Compare →</span></div>
+    <div class="feat"><div class="f-icon">🤖</div><b>AI Mentor Chat</b><p>Ask salary, courses, roadmap — instant offline answers.</p><span class="f-link">Chat now →</span></div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="page-quiz" class="page">
+  <div class="quiz-shell">
+    <div class="quiz-top">
+      <span class="q-pill">✦ Assessment in progress</span>
+      <span id="qcount" class="q-count"></span>
+    </div>
+    <div class="progress"><div id="pbar"></div></div>
+    <h2 id="qtext"></h2>
+    <div id="opts"></div>
+    <div class="quiz-nav">
+      <button id="backBtn" class="ghost" onclick="prevQ()">← Back</button>
+      <button id="nextBtn" class="primary" onclick="nextQ()">Next →</button>
+    </div>
+    <p class="quiz-hint">Tip: there are no wrong answers — pick what feels most like you.</p>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="page-results" class="page">
+  <div class="res-head">
+    <div>
+      <span class="badge">✦ Your results are ready</span>
+      <h2>Your Career Profile</h2>
+      <p id="profileLine" class="muted"></p>
+    </div>
+    <div class="res-actions">
+      <button class="ghost" onclick="startQuiz()">↻ Retake</button>
+      <button class="ghost" onclick="showLibrary()">Explore All</button>
+    </div>
+  </div>
+  <div class="res-grid">
+    <div class="panel">
+      <h3>🧬 Your 9-dimension DNA</h3>
+      <div id="dimBars"></div>
+    </div>
+    <div class="panel highlight">
+      <h3>🏆 Top 3 Matches</h3>
+      <div id="topCards" class="cards"></div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab(event,'tab-why')">💡 Why This Matches</button>
+    <button class="tab" onclick="switchTab(event,'tab-road')">🗺️ Roadmap</button>
+    <button class="tab" onclick="switchTab(event,'tab-sim')">🎚️ What-If Simulator</button>
+    <button class="tab" onclick="switchTab(event,'tab-comp')">⚖️ Compare</button>
+    <button class="tab" onclick="switchTab(event,'tab-ai')">🤖 AI Mentor</button>
+  </div>
+
+  <div id="tab-why" class="tabpanel active"></div>
+  <div id="tab-road" class="tabpanel"></div>
+  <div id="tab-sim" class="tabpanel">
+    <p class="muted">Drag sliders to simulate improved skills. Match% updates live using the same scoring formula.</p>
+    <div id="simSliders"></div>
+    <div id="simOut"></div>
+  </div>
+  <div id="tab-comp" class="tabpanel"></div>
+  <div id="tab-ai" class="tabpanel">
+    <div id="chatBox" class="chat"></div>
+    <div class="chat-in">
+      <input id="chatInput" placeholder="Ask e.g. 'salary of data scientist?' or 'how to become IAS?'" onkeydown="if(event.key==='Enter')sendChat()" />
+      <button class="primary" onclick="sendChat()">Send ➤</button>
+    </div>
+    <div class="chips">
+      <button onclick="quickAsk(this)">Salary of data scientist?</button>
+      <button onclick="quickAsk(this)">Roadmap for IAS?</button>
+      <button onclick="quickAsk(this)">Courses for UI UX?</button>
+      <button onclick="quickAsk(this)">Compare my top careers</button>
+    </div>
+  </div>
+</section>
+
+<!-- LIBRARY -->
+<section id="page-library" class="page">
+  <span class="badge">📚 10 curated paths</span>
+  <h2>Career Library</h2>
+  <p class="muted">Search by title, skill or course. Click any card for full roadmap.</p>
+  <div class="search-wrap"><span>🔍</span><input id="search" placeholder="Search careers, skills, courses..." oninput="renderLibrary()" /></div>
+  <div id="libGrid" class="cards"></div>
+</section>
+
+<!-- DETAIL -->
+<section id="page-detail" class="page">
+  <button class="ghost" onclick="backFromDetail()">← Back</button>
+  <div id="detailBody" class="panel detail"></div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <b>🧭 CareerCompass</b>
+    <span>Made for Hackathon • Deterministic Explainable Scoring • 100% HTML + JS, no backend</span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/scoringEngine.js"></script>
+<script src="js/app.js"></script>
+<script>
+window.addEventListener('scroll',()=>{
+  document.querySelector('.nav').classList.toggle('scrolled', window.scrollY>10);
+});
+function quickAsk(btn){
+  const i=document.getElementById('chatInput');
+  i.value=btn.textContent; sendChat();
+}
+</script>
+</body>
+</html>
